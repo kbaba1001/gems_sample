@@ -5,6 +5,7 @@ class AuthorTest < ActiveSupport::TestCase
     author = Author.create(name: 'alice', birth_date: 30.years.ago)
 
     p { author.name == 'bob' }
+    p { author.foo == 'baz' }
 
     dummy_author = OpenStruct.new(name: 'alice', birth_date: 30.years.ago)
 
