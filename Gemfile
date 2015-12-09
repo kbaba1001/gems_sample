@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'power_p'
 end
 
 group :development do
