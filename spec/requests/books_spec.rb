@@ -13,7 +13,7 @@ describe 'book' do
       }
     }
 
-    post '/books', params
+    post '/api/books', params
 
     expect(status).to eq(200)
 
@@ -29,7 +29,7 @@ describe 'book' do
       }
     }
 
-    post '/books', params
+    post '/api/books', params
 
     expect(status).to eq(400)
 
