@@ -1,4 +1,4 @@
-class API::ErrorsController < API::ApplicationController
+class Api::ErrorsController < Api::ApplicationController
   include Gaffe::Errors
 
   # Make sure anonymous users can see the page
@@ -10,8 +10,8 @@ class API::ErrorsController < API::ApplicationController
   # Render a simple JSON response containing the error “standard” code
   # plus the exception name and backtrace if we’re in development.
   def show
-    output = { error: @rescue_response }
-    output.merge! exception: @exception.inspect, backtrace: @exception.backtrace.first(10) if Rails.env.development? || Rails.env.test?
+    # output.merge! exception: @exception.inspect, backtrace: @exception.backtrace.first(10) if Rails.env.development? || Rails.env.test?
+    output = {errors: @exception.message}
     render json: output, status: @status_code
   end
 end
