@@ -14,6 +14,7 @@ gem 'gaffe'
 group :development, :test do
   gem 'byebug'
   gem 'power_p'
+  gem 'rspec-rails'
 end
 
 group :development do
