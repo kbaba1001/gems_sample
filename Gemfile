@@ -15,6 +15,7 @@ group :development, :test do
   gem 'byebug'
   gem 'power_p'
   gem 'rspec-rails'
+  gem 'rspec_api_documentation'
 end
 
 group :development do
