@@ -1,5 +1,7 @@
 class Api::BooksController < Api::ApplicationController
   def create
+    puts request.env['REQUEST_URI']
+
     book = Book.new(book_params)
 
     if book.valid?
